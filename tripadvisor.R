@@ -1,6 +1,7 @@
 library(rvest)
-library(RCurl)
-library(curl)
+
+# set working directory
+setwd("/Users/ploid/Github/tripadvisor/")
 
 d = NULL
 
@@ -53,13 +54,29 @@ for(i in seq(0, 0, 0)){
     html_node(".location") %>%
     html_text()
   
-  fullreview <- review_link[2] %>%
-    read_html() %>%
-    html_node(paste(paste("#review_", id[2], sep = ""),"p", sep = " ")) %>%
-    html_text()
 
-  data <- data.frame(i, id, quote, rating, date, location,review_link, review, fullreview, stringsAsFactors = FALSE)
+  data <- data.frame(i, id, quote, rating, date, location,review_link, stringsAsFactors = FALSE)
   d = rbind(d,data)
 }
+
+get.full.review = function(review_link,id){
+  fullreview <- review_link %>%
+    read_html() %>%
+    html_node(paste(paste("#review_", id, sep = ""),"p", sep = " ")) %>%
+    html_text()
+  
+  return(fullreview)
+}
+
+fullrev <- rep(NA,nrow(d))
+
+for(i in 1:nrow(d)){
+  
+  fullrev[i] <- get.full.review(d$review_link[i],d$id[i])
+  if(i %% 20 == 0) print(i)
+  
+}
+
+d$fullreview <- fullrev
 d %>% View()
 
