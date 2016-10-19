@@ -21,10 +21,7 @@ web.html <- read_html(remDr$getPageSource()[[1]])
 
 d = NULL
 
-for(i in seq(0, 10, 10)){
-  
-  # urlReview <- paste0("https://www.tripadvisor.com/Attraction_Review-g293916-d311043-Reviews-or",i,"-Temple_of_the_Reclining_Buddha_Wat_Pho-Bangkok.html#REVIEWS")
-  
+get.all.info <- function(web.html){
   reviews <- web.html %>%
     html_nodes("#REVIEWS .innerBubble")
   
@@ -70,12 +67,26 @@ for(i in seq(0, 10, 10)){
   
   
   data <- data.frame(i, id, quote, rating, date, location,review_link, stringsAsFactors = FALSE)
-  d = rbind(d,data)
   
-  next.btn <- remDr$findElement(using = "xpath", value = "//*[@id='REVIEWS']/div[17]/div/a")
-  next.btn$getElementAttribute('href')
+}
+
+for(i in seq(0, 10, 10)){
   
-  next.btn$clickElement()
+  # urlReview <- paste0("https://www.tripadvisor.com/Attraction_Review-g293916-d311043-Reviews-or",i,"-Temple_of_the_Reclining_Buddha_Wat_Pho-Bangkok.html#REVIEWS")
+  
+  temp <- get.all.info(web.html)
+  d = rbind(d,temp)
+  if(i == 0){
+    next.btn <- remDr$findElement(using = "xpath", value = "//*[@id='REVIEWS']/div[17]/div/a")
+    next.btn$getElementAttribute('href')
+    
+    next.btn$clickElement()
+    
+    Sys.sleep(5)
+    
+    web.html <- read_html(remDr$getPageSource()[[1]])
+  }
+  
 }
 
 get.full.review = function(review_link,id){
