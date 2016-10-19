@@ -527,3 +527,165 @@
 [INFO  - 2016-10-19T11:11:12.805Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
 [INFO  - 2016-10-19T11:12:23.407Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
 [INFO  - 2016-10-19T11:14:06.914Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-10-19T15:07:58.625Z] GhostDriver - Main - running on port 20338
+[INFO  - 2016-10-19T15:07:58.900Z] Session [d255abf0-960d-11e6-8589-8d25d0e29cfb] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2016-10-19T15:07:58.900Z] Session [d255abf0-960d-11e6-8589-8d25d0e29cfb] - page.customHeaders:  - {}
+[INFO  - 2016-10-19T15:07:58.900Z] Session [d255abf0-960d-11e6-8589-8d25d0e29cfb] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-10.11 (El Capitan)-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-10-19T15:07:58.900Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: d255abf0-960d-11e6-8589-8d25d0e29cfb
+[ERROR - 2016-10-19T15:08:26.337Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1476889706300
+[INFO  - 2016-10-19T15:10:10.252Z] GhostDriver - Main - running on port 3037
+[INFO  - 2016-10-19T15:10:10.508Z] Session [20c7c390-960e-11e6-9d80-77ba9a948032] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2016-10-19T15:10:10.508Z] Session [20c7c390-960e-11e6-9d80-77ba9a948032] - page.customHeaders:  - {}
+[INFO  - 2016-10-19T15:10:10.508Z] Session [20c7c390-960e-11e6-9d80-77ba9a948032] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-10.11 (El Capitan)-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-10-19T15:10:10.509Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 20c7c390-960e-11e6-9d80-77ba9a948032
+[ERROR - 2016-10-19T15:10:42.445Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1476889842412
+[INFO  - 2016-10-19T15:11:22.392Z] GhostDriver - Main - running on port 15609
+[INFO  - 2016-10-19T15:11:22.599Z] Session [4bbf8510-960e-11e6-8db9-59046c72e347] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2016-10-19T15:11:22.599Z] Session [4bbf8510-960e-11e6-8db9-59046c72e347] - page.customHeaders:  - {}
+[INFO  - 2016-10-19T15:11:22.599Z] Session [4bbf8510-960e-11e6-8db9-59046c72e347] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-10.11 (El Capitan)-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-10-19T15:11:22.600Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 4bbf8510-960e-11e6-8db9-59046c72e347
+[INFO  - 2016-10-19T15:12:09.042Z] GhostDriver - Main - running on port 38556
+[INFO  - 2016-10-19T15:12:09.200Z] Session [678692c0-960e-11e6-a428-cb5b08974456] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2016-10-19T15:12:09.200Z] Session [678692c0-960e-11e6-a428-cb5b08974456] - page.customHeaders:  - {}
+[INFO  - 2016-10-19T15:12:09.200Z] Session [678692c0-960e-11e6-a428-cb5b08974456] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-10.11 (El Capitan)-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-10-19T15:12:09.200Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 678692c0-960e-11e6-a428-cb5b08974456
+[ERROR - 2016-10-19T15:12:37.723Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1476889957695
+[INFO  - 2016-10-19T15:12:58.645Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-10-19T15:15:10.274Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-10-19T15:16:22.402Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-10-19T15:17:09.053Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-10-19T15:17:58.654Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-10-19T15:20:10.284Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-10-19T15:21:22.411Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-10-19T15:22:09.063Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-10-19T15:22:58.665Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-10-19T15:25:10.294Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-10-19T15:26:22.422Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-10-19T15:27:09.072Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-10-19T15:27:58.674Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-10-19T15:30:10.305Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-10-19T15:31:22.432Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-10-19T15:32:09.083Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-10-19T15:32:58.684Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-10-19T15:35:10.313Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-10-19T15:36:22.440Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-10-19T15:37:09.091Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-10-19T15:37:58.693Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-10-19T15:40:10.323Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-10-19T15:41:22.450Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-10-19T15:42:09.101Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-10-19T15:42:58.702Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-10-19T15:45:10.332Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-10-19T15:46:22.459Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-10-19T15:47:09.110Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-10-19T15:47:58.712Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-10-19T15:49:22.417Z] GhostDriver - Main - running on port 11427
+[INFO  - 2016-10-19T15:49:22.665Z] Session [9ac64950-9613-11e6-8d94-859d40f2feca] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2016-10-19T15:49:22.665Z] Session [9ac64950-9613-11e6-8d94-859d40f2feca] - page.customHeaders:  - {}
+[INFO  - 2016-10-19T15:49:22.665Z] Session [9ac64950-9613-11e6-8d94-859d40f2feca] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-10.11 (El Capitan)-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-10-19T15:49:22.665Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 9ac64950-9613-11e6-8d94-859d40f2feca
+[INFO  - 2016-10-19T15:49:41.413Z] Session [9ac64950-9613-11e6-8d94-859d40f2feca] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2016-10-19T15:49:41.413Z] Session [9ac64950-9613-11e6-8d94-859d40f2feca] - page.customHeaders:  - {}
+[INFO  - 2016-10-19T15:50:10.342Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-10-19T15:51:22.469Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-10-19T15:52:09.120Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-10-19T15:52:58.721Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-10-19T15:54:22.426Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-10-19T15:55:10.352Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-10-19T15:55:52.256Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2016-10-19T15:56:22.478Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-10-19T15:57:09.129Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-10-19T15:57:58.731Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-10-19T15:58:03.396Z] GhostDriver - Main - running on port 2298
+[INFO  - 2016-10-19T15:58:03.522Z] Session [d13a9ad0-9614-11e6-a1e6-1be0ffb02714] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2016-10-19T15:58:03.522Z] Session [d13a9ad0-9614-11e6-a1e6-1be0ffb02714] - page.customHeaders:  - {}
+[INFO  - 2016-10-19T15:58:03.522Z] Session [d13a9ad0-9614-11e6-a1e6-1be0ffb02714] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-10.11 (El Capitan)-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-10-19T15:58:03.522Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: d13a9ad0-9614-11e6-a1e6-1be0ffb02714
+[INFO  - 2016-10-19T15:58:27.508Z] Session [d13a9ad0-9614-11e6-a1e6-1be0ffb02714] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2016-10-19T15:58:27.508Z] Session [d13a9ad0-9614-11e6-a1e6-1be0ffb02714] - page.customHeaders:  - {}
+[INFO  - 2016-10-19T16:00:10.361Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-10-19T16:01:22.488Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-10-19T16:02:09.139Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-10-19T16:02:58.740Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-10-19T16:03:03.405Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-10-19T16:04:11.620Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2016-10-19T16:05:10.370Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-10-19T16:06:22.497Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-10-19T16:07:09.149Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-10-19T16:07:58.750Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-10-19T16:10:10.381Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-10-19T16:11:22.508Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-10-19T16:12:09.159Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-10-19T16:12:58.760Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-10-19T16:14:27.264Z] GhostDriver - Main - running on port 10401
+[INFO  - 2016-10-19T16:14:27.315Z] Session [1b9d32c0-9617-11e6-9782-0b3ec3f6037a] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2016-10-19T16:14:27.315Z] Session [1b9d32c0-9617-11e6-9782-0b3ec3f6037a] - page.customHeaders:  - {}
+[INFO  - 2016-10-19T16:14:27.315Z] Session [1b9d32c0-9617-11e6-9782-0b3ec3f6037a] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-10.11 (El Capitan)-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-10-19T16:14:27.315Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 1b9d32c0-9617-11e6-9782-0b3ec3f6037a
+[INFO  - 2016-10-19T16:14:49.663Z] Session [1b9d32c0-9617-11e6-9782-0b3ec3f6037a] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2016-10-19T16:14:49.663Z] Session [1b9d32c0-9617-11e6-9782-0b3ec3f6037a] - page.customHeaders:  - {}
+[INFO  - 2016-10-19T16:15:10.389Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-10-19T16:16:22.516Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-10-19T16:17:09.168Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-10-19T16:17:36.766Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2016-10-19T16:17:58.769Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-10-19T16:18:11.206Z] GhostDriver - Main - running on port 45541
+[INFO  - 2016-10-19T16:18:11.276Z] Session [a11b3d70-9617-11e6-9626-2788b8e77e15] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2016-10-19T16:18:11.276Z] Session [a11b3d70-9617-11e6-9626-2788b8e77e15] - page.customHeaders:  - {}
+[INFO  - 2016-10-19T16:18:11.276Z] Session [a11b3d70-9617-11e6-9626-2788b8e77e15] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-10.11 (El Capitan)-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-10-19T16:18:11.276Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: a11b3d70-9617-11e6-9626-2788b8e77e15
+[INFO  - 2016-10-19T16:18:43.791Z] Session [a11b3d70-9617-11e6-9626-2788b8e77e15] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2016-10-19T16:18:43.791Z] Session [a11b3d70-9617-11e6-9626-2788b8e77e15] - page.customHeaders:  - {}
+[INFO  - 2016-10-19T16:20:10.399Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-10-19T16:21:22.526Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-10-19T16:21:56.662Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2016-10-19T16:22:09.177Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-10-19T16:22:58.778Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-10-19T16:25:10.408Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-10-19T16:26:22.535Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-10-19T16:27:09.187Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-10-19T16:27:58.787Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-10-19T16:30:10.418Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-10-19T16:31:22.544Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-10-19T16:32:07.060Z] GhostDriver - Main - running on port 7325
+[INFO  - 2016-10-19T16:32:07.206Z] Session [935c3020-9619-11e6-b572-f9fe0c7b24ae] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2016-10-19T16:32:07.207Z] Session [935c3020-9619-11e6-b572-f9fe0c7b24ae] - page.customHeaders:  - {}
+[INFO  - 2016-10-19T16:32:07.207Z] Session [935c3020-9619-11e6-b572-f9fe0c7b24ae] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-10.11 (El Capitan)-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-10-19T16:32:07.207Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 935c3020-9619-11e6-b572-f9fe0c7b24ae
+[INFO  - 2016-10-19T16:32:09.196Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-10-19T16:32:16.710Z] Session [935c3020-9619-11e6-b572-f9fe0c7b24ae] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2016-10-19T16:32:16.710Z] Session [935c3020-9619-11e6-b572-f9fe0c7b24ae] - page.customHeaders:  - {}
+[INFO  - 2016-10-19T16:32:58.797Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-10-19T16:34:16.185Z] GhostDriver - Main - running on port 49011
+[INFO  - 2016-10-19T16:34:16.356Z] Session [e056c2f0-9619-11e6-ba03-d3aa46b8107e] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2016-10-19T16:34:16.356Z] Session [e056c2f0-9619-11e6-ba03-d3aa46b8107e] - page.customHeaders:  - {}
+[INFO  - 2016-10-19T16:34:16.356Z] Session [e056c2f0-9619-11e6-ba03-d3aa46b8107e] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-10.11 (El Capitan)-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-10-19T16:34:16.356Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: e056c2f0-9619-11e6-ba03-d3aa46b8107e
+[INFO  - 2016-10-19T16:34:22.795Z] Session [e056c2f0-9619-11e6-ba03-d3aa46b8107e] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2016-10-19T16:34:22.795Z] Session [e056c2f0-9619-11e6-ba03-d3aa46b8107e] - page.customHeaders:  - {}
+[INFO  - 2016-10-19T16:35:10.876Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-10-19T16:35:29.489Z] GhostDriver - Main - running on port 21112
+[INFO  - 2016-10-19T16:35:29.689Z] Session [0c0c7d40-961a-11e6-98da-ebaa3d155dda] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2016-10-19T16:35:29.689Z] Session [0c0c7d40-961a-11e6-98da-ebaa3d155dda] - page.customHeaders:  - {}
+[INFO  - 2016-10-19T16:35:29.689Z] Session [0c0c7d40-961a-11e6-98da-ebaa3d155dda] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-10.11 (El Capitan)-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-10-19T16:35:29.689Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 0c0c7d40-961a-11e6-98da-ebaa3d155dda
+[INFO  - 2016-10-19T16:36:23.003Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-10-19T16:37:07.522Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-10-19T16:37:09.655Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-10-19T16:37:43.228Z] GhostDriver - Main - running on port 23071
+[INFO  - 2016-10-19T16:37:43.383Z] Session [5bbc6c10-961a-11e6-a655-578b0284860b] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2016-10-19T16:37:43.384Z] Session [5bbc6c10-961a-11e6-a655-578b0284860b] - page.customHeaders:  - {}
+[INFO  - 2016-10-19T16:37:43.384Z] Session [5bbc6c10-961a-11e6-a655-578b0284860b] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-10.11 (El Capitan)-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-10-19T16:37:43.384Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 5bbc6c10-961a-11e6-a655-578b0284860b
+[INFO  - 2016-10-19T16:37:59.255Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-10-19T16:38:06.646Z] Session [5bbc6c10-961a-11e6-a655-578b0284860b] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2016-10-19T16:38:06.646Z] Session [5bbc6c10-961a-11e6-a655-578b0284860b] - page.customHeaders:  - {}
+[INFO  - 2016-10-19T16:39:16.194Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-10-19T16:40:10.886Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-10-19T16:40:29.510Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-10-19T16:40:53.250Z] ShutdownReqHand - _handle - About to shutdown
+[INFO  - 2016-10-19T16:41:23.012Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-10-19T16:42:07.537Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-10-19T16:42:09.665Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-10-19T16:42:59.265Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-10-19T16:44:16.217Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW

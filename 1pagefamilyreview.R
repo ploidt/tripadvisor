@@ -1,7 +1,7 @@
 require(RSelenium)
 library(rvest)
 
-remDr <- remoteDriver(browserName = "chrome")
+remDr <- remoteDriver(browserName = "phantomjs")
 
 remDr$open()
 remDr$navigate("http://www.tripadvisor.com/Attraction_Review-g293916-d311043-Reviews-Temple_of_the_Reclining_Buddha_Wat_Pho-Bangkok.html")
@@ -36,7 +36,7 @@ get.all.info <- function(web.html){
     html_attr("href") 
   review_link <- trimws(review_link,which="both")
   
-  review_link <- paste("https://www.tripadvisor.com",review_link,sep="")
+  review_link <- paste("https://www.tripadvisor.com", review_link ,sep="")
   
   quote <- reviews %>%
     html_node(".quote span") %>%
@@ -61,16 +61,21 @@ get.all.info <- function(web.html){
   member <- web.html %>% 
     html_nodes("#REVIEWS .col1of2")
   
+  memberid <- member %>%
+    html_node(".memberOverlayLink") %>%
+    html_attr("id")
+  memberid <- substr(memberid,5,36)
+  
   location <- member %>%
     html_node(".location") %>%
     html_text()
   
   
-  data <- data.frame(i, id, quote, rating, date, location,review_link, stringsAsFactors = FALSE)
+  data <- data.frame(i, id, quote, rating, date, memberid, location, review_link, stringsAsFactors = FALSE)
   
 }
 
-for(i in seq(0, 10, 10)){
+for(i in seq(0, 50, 10)){
   
   # urlReview <- paste0("https://www.tripadvisor.com/Attraction_Review-g293916-d311043-Reviews-or",i,"-Temple_of_the_Reclining_Buddha_Wat_Pho-Bangkok.html#REVIEWS")
   
@@ -108,6 +113,32 @@ for(i in 1:nrow(d)){
 }
 
 d$fullreview <- fullrev
+
+get.user.age = function(uid){
+  profile.link <- paste("https://www.tripadvisor.com/MemberProfile-a_uid.", uid, sep = "")
+  remDr$navigate(profile.link)
+  profile.html <- read_html(remDr$getPageSource()[[1]])
+  
+  age.since <- profile.html %>%
+    html_node(".ageSince")
+  
+  age <- age.since %>%
+    html_nodes("p") %>%
+    html_text(trim=TRUE) %>%
+    gsub(" year old", "", .) 
+  
+  return(age[2])
+}
+
+ages <- rep(NA,nrow(d))
+
+for(i in 1:nrow(d)){
+  
+  ages[i] <- get.user.age(d$memberid[i])
+  
+}
+
+d$age <- ages
 
 remDr$close()
 d %>% View()
