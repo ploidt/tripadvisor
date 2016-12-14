@@ -1,10 +1,10 @@
 require(RSelenium)
 library(rvest)
 
-remDr <- remoteDriver(browserName = "phantomjs")
+remDr <- remoteDriver(browserName = "chrome")
 
 remDr$open()
-remDr$navigate("http://www.tripadvisor.com/Attraction_Review-g293916-d311043-Reviews-Temple_of_the_Reclining_Buddha_Wat_Pho-Bangkok.html")
+remDr$navigate("http://www.tripadvisor.com/Attraction_Review-g293916-d311043-Reviews-or10-Temple_of_the_Reclining_Buddha_Wat_Pho-Bangkok.html")
 remDr$deleteAllCookies()
 
 #family
@@ -14,8 +14,20 @@ family.boolean
 remDr$executeScript(script = "document.getElementById('taplc_prodp13n_hr_sur_review_filter_controls_0_filterSegment_Family').checked = true", args = list())
 remDr$executeScript(script = "ta.plc_prodp13n_hr_sur_review_filter_controls_0_handlers.toggleFilter(); ta.plc_prodp13n_hr_sur_review_filter_controls_0_handlers.trackCheckBoxClick(this, 'Reviews_Controls', 'traveler_filter', 'Families');",args = list())
 
-#reload bf change?
-Sys.sleep(10)
+#reload bf change
+Sys.sleep(5)
+
+wantToSkipPage <- FALSE
+
+if(wantToSkipPage){
+  # next.btn <- remDr$findElement(using = "class name", value = "next")
+  # next.btn$getElementAttribute('href')
+  # next.btn$clickElement()
+  
+  remDr$navigate("http://www.tripadvisor.com/Attraction_Review-g293916-d311043-Reviews-or10-Temple_of_the_Reclining_Buddha_Wat_Pho-Bangkok.html")
+  
+  Sys.sleep(5) 
+}
 
 web.html <- read_html(remDr$getPageSource()[[1]])
 
@@ -75,22 +87,24 @@ get.all.info <- function(web.html){
   
 }
 
-for(i in seq(0, 50, 10)){
+for(i in seq(1, 10, 1)){
   
   # urlReview <- paste0("https://www.tripadvisor.com/Attraction_Review-g293916-d311043-Reviews-or",i,"-Temple_of_the_Reclining_Buddha_Wat_Pho-Bangkok.html#REVIEWS")
-  
+  print(i)
   temp <- get.all.info(web.html)
   d = rbind(d,temp)
-  if(i == 0){
-    next.btn <- remDr$findElement(using = "xpath", value = "//*[@id='REVIEWS']/div[17]/div/a")
+  
+    next.btn <- remDr$findElement(using = "class name", value = "next")
     next.btn$getElementAttribute('href')
-    
     next.btn$clickElement()
+  
+  # script.page <- paste0("ta.setEvtCookie('STANDARD_PAGINATION', 'next', '",i,"', 0, this.href)")
+  # remDr$executeScript(script = script.page,args = list())
     
     Sys.sleep(5)
     
     web.html <- read_html(remDr$getPageSource()[[1]])
-  }
+  
   
 }
 
@@ -141,4 +155,7 @@ for(i in 1:nrow(d)){
 d$age <- ages
 
 remDr$close()
+
+write.csv(d, file = "family_review_page_1_6.csv")
+
 d %>% View()
