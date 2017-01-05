@@ -1,10 +1,12 @@
 require(RSelenium)
 library(rvest)
+path <- "/Users/ploid/GitHub/tripadvisor/watpho/family"
+setwd(path)
 
-remDr <- remoteDriver(browserName = "chrome")
+remDr <- remoteDriver(browserName = "phantomjs")
 
 remDr$open()
-remDr$navigate("http://www.tripadvisor.com/Attraction_Review-g293916-d311043-Reviews-or10-Temple_of_the_Reclining_Buddha_Wat_Pho-Bangkok.html")
+remDr$navigate("http://www.tripadvisor.com/Attraction_Review-g293916-d311043-Reviews-Temple_of_the_Reclining_Buddha_Wat_Pho-Bangkok.html#REVIEWS")
 remDr$deleteAllCookies()
 
 #family
@@ -17,15 +19,13 @@ remDr$executeScript(script = "ta.plc_prodp13n_hr_sur_review_filter_controls_0_ha
 #reload bf change
 Sys.sleep(5)
 
-wantToSkipPage <- FALSE
+wantToSkipPage <- TRUE
+file.name <- "family_review_page_62.csv"
+page.link <- "http://www.tripadvisor.com/Attraction_Review-g293916-d311043-Reviews-or610-Temple_of_the_Reclining_Buddha_Wat_Pho-Bangkok.html"
 
 if(wantToSkipPage){
-  # next.btn <- remDr$findElement(using = "class name", value = "next")
-  # next.btn$getElementAttribute('href')
-  # next.btn$clickElement()
-  
-  remDr$navigate("http://www.tripadvisor.com/Attraction_Review-g293916-d311043-Reviews-or10-Temple_of_the_Reclining_Buddha_Wat_Pho-Bangkok.html")
-  
+
+  remDr$navigate(page.link)
   Sys.sleep(5) 
 }
 
@@ -61,11 +61,14 @@ get.all.info <- function(web.html){
     as.integer()
   
   date <- reviews %>%
-    html_node(".rating .ratingDate") %>%
-    html_attr("title") %>%
+    # html_node(".rating .ratingDate") %>%
+    html_node(".ratingDate") %>%
+    html_text() %>%
+    gsub("Reviewed ", "", .) %>%
+    # html_attr("title") %>%
     strptime("%b %d, %Y") %>%
     as.POSIXct()
-  
+
   review <- reviews %>%
     html_node(".entry .partial_entry") %>%
     html_text()
@@ -83,28 +86,28 @@ get.all.info <- function(web.html){
     html_text()
   
   
-  data <- data.frame(i, id, quote, rating, date, memberid, location, review_link, stringsAsFactors = FALSE)
+  data <- data.frame(i, id, quote, rating, date, memberid, trimws(location), review_link, stringsAsFactors = FALSE)
   
 }
 
-for(i in seq(1, 10, 1)){
+for(i in seq(1, 1, 1)){
   
   # urlReview <- paste0("https://www.tripadvisor.com/Attraction_Review-g293916-d311043-Reviews-or",i,"-Temple_of_the_Reclining_Buddha_Wat_Pho-Bangkok.html#REVIEWS")
   print(i)
   temp <- get.all.info(web.html)
   d = rbind(d,temp)
   
-    next.btn <- remDr$findElement(using = "class name", value = "next")
-    next.btn$getElementAttribute('href')
-    next.btn$clickElement()
-  
-  # script.page <- paste0("ta.setEvtCookie('STANDARD_PAGINATION', 'next', '",i,"', 0, this.href)")
-  # remDr$executeScript(script = script.page,args = list())
-    
-    Sys.sleep(5)
-    
-    web.html <- read_html(remDr$getPageSource()[[1]])
-  
+    # next.btn <- remDr$findElement(using = "class name", value = "next")
+    # next.btn$getElementAttribute('href')
+    # next.btn$clickElement()
+    # 
+    # script <- "document.getElementsByClassName('next')[0].click();"
+    # remDr$executeScript(script, args = list())
+    # 
+    # Sys.sleep(7)
+    # 
+    # web.html <- read_html(remDr$getPageSource()[[1]])
+    # 
   
 }
 
@@ -114,7 +117,7 @@ get.full.review = function(review_link,id){
     html_node(paste(paste("#review_", id, sep = ""),"p", sep = " ")) %>%
     html_text()
   
-  return(fullreview)
+  return(trimws(fullreview))
 }
 
 fullrev <- rep(NA,nrow(d))
@@ -156,6 +159,6 @@ d$age <- ages
 
 remDr$close()
 
-write.csv(d, file = "family_review_page_1_6.csv")
+write.csv(d, file = file.name)
 
-d %>% View()
+# d %>% View()
