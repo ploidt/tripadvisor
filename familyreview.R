@@ -1,30 +1,44 @@
 require(RSelenium)
+library(beepr)
 library(rvest)
-path <- "/Users/ploid/GitHub/tripadvisor/watpho/family"
+path <- "/Users/ploid/GitHub/tripadvisor-watpho/watpho/friend"
 setwd(path)
 
 remDr <- remoteDriver(browserName = "phantomjs")
 
 remDr$open()
-remDr$navigate("http://www.tripadvisor.com/Attraction_Review-g293916-d311043-Reviews-Temple_of_the_Reclining_Buddha_Wat_Pho-Bangkok.html#REVIEWS")
+remDr$navigate("https://www.tripadvisor.com/Attraction_Review-g293916-d311043-Reviews-Temple_of_the_Reclining_Buddha_Wat_Pho-Bangkok.html")
 remDr$deleteAllCookies()
 
 #family
-family.boolean <- remDr$executeScript(script = "return document.getElementById('taplc_prodp13n_hr_sur_review_filter_controls_0_filterSegment_Family').checked", args = vector())
-family.boolean
+# remDr$executeScript(script = "document.getElementById('taplc_prodp13n_hr_sur_review_filter_controls_0_filterSegment_Family').checked = true", args = list())
+# remDr$executeScript(script = "ta.plc_prodp13n_hr_sur_review_filter_controls_0_handlers.toggleFilter(); ta.plc_prodp13n_hr_sur_review_filter_controls_0_handlers.trackCheckBoxClick(this, 'Reviews_Controls', 'traveler_filter', 'Families');",args = list())
 
-remDr$executeScript(script = "document.getElementById('taplc_prodp13n_hr_sur_review_filter_controls_0_filterSegment_Family').checked = true", args = list())
-remDr$executeScript(script = "ta.plc_prodp13n_hr_sur_review_filter_controls_0_handlers.toggleFilter(); ta.plc_prodp13n_hr_sur_review_filter_controls_0_handlers.trackCheckBoxClick(this, 'Reviews_Controls', 'traveler_filter', 'Families');",args = list())
+#friend
+remDr$executeScript(script = "document.getElementById('taplc_prodp13n_hr_sur_review_filter_controls_0_filterSegment_Friends').checked = true", args = list())
+remDr$executeScript(script = "ta.plc_prodp13n_hr_sur_review_filter_controls_0_handlers.toggleFilter(); ta.plc_prodp13n_hr_sur_review_filter_controls_0_handlers.trackCheckBoxClick(this, 'Reviews_Controls', 'traveler_filter', 'Friends');",args = list())
+
+# #solo
+# remDr$executeScript(script ="document.getElementById('taplc_prodp13n_hr_sur_review_filter_controls_0_filterSegment_Solo').checked = true", args = list())
+# remDr$executeScript(script = "ta.plc_prodp13n_hr_sur_review_filter_controls_0_handlers.toggleFilter(); ta.plc_prodp13n_hr_sur_review_filter_controls_0_handlers.trackCheckBoxClick(this, 'Reviews_Controls', 'traveler_filter', 'Solo');",args = list())
+
+#couple
+# remDr$executeScript(script ="document.getElementById('taplc_prodp13n_hr_sur_review_filter_controls_0_filterSegment_Couples').checked = true", args = list())
+# remDr$executeScript(script = "ta.plc_prodp13n_hr_sur_review_filter_controls_0_handlers.toggleFilter(); ta.plc_prodp13n_hr_sur_review_filter_controls_0_handlers.trackCheckBoxClick(this, 'Reviews_Controls', 'traveler_filter', 'Couples');",args = list())
+
+#business
+# remDr$executeScript(script = "document.getElementById('taplc_prodp13n_hr_sur_review_filter_controls_0_filterSegment_Business').checked = true", args = list())
+# remDr$executeScript(script = "ta.plc_prodp13n_hr_sur_review_filter_controls_0_handlers.toggleFilter(); ta.plc_prodp13n_hr_sur_review_filter_controls_0_handlers.trackCheckBoxClick(this, 'Reviews_Controls', 'traveler_filter', 'Business');",args = list())
 
 #reload bf change
 Sys.sleep(5)
 
-for(i in seq(109, 200, 1)){
+for(i in seq(211, 670, 1)){
   
 print(i)
 wantToSkipPage <- TRUE
-file.name <- paste("family_review_page_",i,".csv",sep="")
-page.link <- paste("http://www.tripadvisor.com/Attraction_Review-g293916-d311043-Reviews-or",(i*10)-10,"-Temple_of_the_Reclining_Buddha_Wat_Pho-Bangkok.html",sep="")
+file.name <- paste("friend_review_page_",i,".csv",sep="")
+page.link <- paste("https://www.tripadvisor.com/Attraction_Review-g293916-d311043-Reviews-or",(i*10)-10,"-Temple_of_the_Reclining_Buddha_Wat_Pho-Bangkok.html#REVIEWS",sep="")
 
 if(wantToSkipPage){
   
@@ -65,10 +79,10 @@ get.all.info <- function(web.html){
   
   date <- reviews %>%
     # html_node(".rating .ratingDate") %>%
+    # html_attr("title") %>%
     html_node(".ratingDate") %>%
     html_text() %>%
     gsub("Reviewed ", "", .) %>%
-    # html_attr("title") %>%
     strptime("%b %d, %Y") %>%
     as.POSIXct()
   
@@ -152,3 +166,4 @@ write.csv(d, file = file.name)
 }
 remDr$close()
 # d %>% View()
+beep()
