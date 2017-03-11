@@ -1,52 +1,6 @@
 # install.packages('Amelia')
 library(ggplot2)
 # library(Amelia)
-
-attraction.file.name <- 'BangkokHualamphongStation'
-
-# setwd(paste('/Users/ploid/GitHub/tripadvisor-watpho/data/AmphawaFloatingMarket/', category, sep = ""))
-data.path <- paste('/Users/ploid/GitHub/tripadvisor-watpho/data/', attraction.file.name, sep = "")
-setwd(data.path)
-
-data.file.list <- list.files(path = data.path)
-
-for(i in 1:length(data.file.list)){
-  if(grepl('business',data.file.list[i])){
-    category <- 'business'
-  }else if(grepl('couple',data.file.list[i]) || grepl('couples',data.file.list[i])){
-    category <- 'couples'
-  }
-  else if(grepl('family',data.file.list[i])){
-    category <- 'family'
-  }
-  else if(grepl('family',data.file.list[i])){
-    category <- 'friend'
-  }
-  else if(grepl('family',data.file.list[i])){
-    category <- 'solo'
-  }else{
-    category <- NA
-  }
-}
-
-read.file.name <- 'BangkokHualamphongStation_couple_1to6.csv'
-date.format <- "%Y-%m-%d"
-# date.format <- "%m/%d/%y"
-
-
-dataset <- read.csv(read.file.name, header = TRUE)
-dataset <- unique(dataset)
-file.name <- paste(category, "_clean.csv", sep = "")
-
-
-dataset$rating <- factor(dataset$rating)
-dataset$fullreview <- iconv(dataset$fullreview)
-dataset$quote <- iconv(dataset$quote)
-
-#drop column i, id, member, id , review_link
-drops <- c('X', 'i','id','review_link')
-dataset <- dataset[ , !(names(dataset) %in% drops)]
-
 separate.gender <- function(age) {
   gender <- NA
   if(grepl('female', age, ignore.case = TRUE)){
@@ -58,36 +12,6 @@ separate.gender <- function(age) {
   }
   return(gender)
 }
-  
-#separateage and gender
-gender <- rep(NA,nrow(dataset))
-for(i in 1:nrow(dataset)){
-  gender[i] <- separate.gender(dataset$age[i])
-}
-
-#clean age columnm
-dataset$gender <- gender
-
-dataset$age <- gsub('male', '', dataset$age, ignore.case = TRUE)
-dataset$age <- gsub('fe', '', dataset$age, ignore.case = TRUE)
-dataset$age <- gsub('another gender identity', '', dataset$age, ignore.case = TRUE)
-dataset$age <- gsub('[|]', '', dataset$age)
-dataset$age <- trimws(dataset$age)
-dataset$age <- factor(dataset$age)
-
-#change location column name
-colnames(dataset)[which(names(dataset) == "trimws.location.")] <- "location"
-
-setwd('/Users/ploid/GitHub/tripadvisor-watpho')
-UScities <- read.csv("Top5000Population.csv",header = FALSE)
-cities <- as.vector(UScities$V1)
-capitalCities <- read.csv("country-list.csv",header = TRUE)
-countryCapital <- as.vector(capitalCities$capital)
-countryName <- as.vector(capitalCities$country)
-worldCitiesFile <- read.csv("world_cities.csv",header = TRUE, fileEncoding="latin1")
-worldCities <- as.vector(worldCitiesFile$city)
-continentfile <- read.csv("country-continent.csv",header = TRUE)
-worldCountry <- as.vector(continentfile$name)
 
 find.continent <- function(country){
   row.number <- which(tolower(iconv(continentfile$name)) == country)
@@ -236,76 +160,165 @@ separate.country <- function(location){
   }
 }
 
-country <- rep(NA,nrow(dataset))
-countrynum <- rep(NA,nrow(dataset))
-for(i in 1:nrow(dataset)){
-  country[i] <- separate.country(as.character(dataset$location[i]))
-}
-dataset$country <- factor(country)
+attraction.folder.list <- list.files(path = '/Users/ploid/GitHub/tripadvisor-watpho/data/')
 
-# find continent and sub continent
-continent <- rep(NA,nrow(dataset))
-sub.continent <- rep(NA,nrow(dataset))
-for(i in 1:nrow(dataset)){
-  if(!is.na(dataset$country[i]) && dataset$country[i] %in% tolower(c(trimws(iconv(worldCountry))))){
-    countrynum[i] <- find.num.country(as.character(dataset$country[i]))
-    continent[i] <- find.continent(as.character(dataset$country[i]))
-    sub.continent[i] <- find.sub.continent(as.character(dataset$country[i]))
-  }else{
-    continent[i] <- NA
+for(i in 1:length(attraction.folder.list)){
+  if(attraction.folder.list[i] == "KhlongBangLuangArtistHouse"){
+    position.i <- i
+    break
   }
 }
-dataset$countrynum <- countrynum
-dataset$continent <- continent
-dataset$subcontinent <- sub.continent
+for(i in position.i:length(attraction.folder.list)){
+  print(attraction.folder.list[i])
+  if(attraction.folder.list[i] == "LumpiniPark"){
+    break
+  }
+}
 
-# separate date data
-day <- rep(NA,nrow(dataset))
-month <- rep(NA,nrow(dataset))
-year <- rep(NA,nrow(dataset))
-weekday <- rep(NA,nrow(dataset))
-weektype <- rep(NA,nrow(dataset))
-for(i in 1:nrow(dataset)){
-  if(!is.na(dataset$date[i])){
-    date <- as.Date(dataset$date[i], format = date.format)
-    day[i] <- as.numeric(format(date , format = "%d"))
-    month[i] <- as.numeric(format(date , format = "%m"))
-    year[i] <- as.numeric(format(date , format = "%y"))
-    weekday[i] <- weekdays(date)
-    if(weekday[i] %in% c("Saturday","Sunday")){
-      weektype[i] <- "weekend"
+attraction.file.name <- 'KhaosanRoad'
+
+wd.clean <- paste('clean', attraction.file.name, sep = "")
+data.path <- paste('/Users/ploid/GitHub/tripadvisor-watpho/data/', attraction.file.name, sep = "")
+setwd(data.path)
+
+data.file.list <- list.files(path = data.path)
+
+for(i in 1:length(data.file.list)){
+  if(grepl('business',data.file.list[i])){
+    category <- 'business'
+  }else if(grepl('couple',data.file.list[i]) || grepl('couples',data.file.list[i])){
+    category <- 'couples'
+  }
+  else if(grepl('family',data.file.list[i])){
+    category <- 'family'
+  }
+  else if(grepl('friend',data.file.list[i])){
+    category <- 'friend'
+  }
+  else if(grepl('solo',data.file.list[i])){
+    category <- 'solo'
+  }else{
+    category <- NA
+  }
+  setwd(data.path)
+  dataset <- read.csv(data.file.list[i], header = TRUE)
+  dataset <- unique(dataset)
+  file.name <- paste(category, "_clean.csv", sep = "")
+  
+  dataset$rating <- factor(dataset$rating)
+  dataset$fullreview <- iconv(dataset$fullreview)
+  dataset$quote <- iconv(dataset$quote)
+  
+  #drop column i, id, member, id , review_link
+  drops <- c('X','X.1', 'i','id','review_link')
+  dataset <- dataset[ , !(names(dataset) %in% drops)]
+  dataset <- unique(dataset)
+  
+  #separateage and gender
+  gender <- rep(NA,nrow(dataset))
+  for(i in 1:nrow(dataset)){
+    gender[i] <- separate.gender(dataset$age[i])
+  }
+  
+  #clean age columnm
+  dataset$gender <- gender
+  
+  dataset$age <- gsub('male', '', dataset$age, ignore.case = TRUE)
+  dataset$age <- gsub('fe', '', dataset$age, ignore.case = TRUE)
+  dataset$age <- gsub('another gender identity', '', dataset$age, ignore.case = TRUE)
+  dataset$age <- gsub('[|]', '', dataset$age)
+  dataset$age <- trimws(dataset$age)
+  dataset$age <- factor(dataset$age)
+  
+  #change location column name
+  colnames(dataset)[which(names(dataset) == "trimws.location.")] <- "location"
+  
+  setwd('/Users/ploid/GitHub/tripadvisor-watpho')
+  UScities <- read.csv("Top5000Population.csv",header = FALSE)
+  cities <- as.vector(UScities$V1)
+  capitalCities <- read.csv("country-list.csv",header = TRUE)
+  countryCapital <- as.vector(capitalCities$capital)
+  countryName <- as.vector(capitalCities$country)
+  worldCitiesFile <- read.csv("world_cities.csv",header = TRUE, fileEncoding="latin1")
+  worldCities <- as.vector(worldCitiesFile$city)
+  continentfile <- read.csv("country-continent.csv",header = TRUE)
+  worldCountry <- as.vector(continentfile$name)
+  
+  country <- rep(NA,nrow(dataset))
+  countrynum <- rep(NA,nrow(dataset))
+  for(i in 1:nrow(dataset)){
+    country[i] <- separate.country(as.character(dataset$location[i]))
+  }
+  dataset$country <- factor(country)
+  
+  # find continent and sub continent
+  continent <- rep(NA,nrow(dataset))
+  sub.continent <- rep(NA,nrow(dataset))
+  for(i in 1:nrow(dataset)){
+    if(!is.na(dataset$country[i]) && dataset$country[i] %in% tolower(c(trimws(iconv(worldCountry))))){
+      countrynum[i] <- find.num.country(as.character(dataset$country[i]))
+      continent[i] <- find.continent(as.character(dataset$country[i]))
+      sub.continent[i] <- find.sub.continent(as.character(dataset$country[i]))
     }else{
-      weektype[i] <- "weekday"
+      continent[i] <- NA
     }
   }
+  dataset$countrynum <- countrynum
+  dataset$continent <- continent
+  dataset$subcontinent <- sub.continent
+  
+  # separate date data
+  day <- rep(NA,nrow(dataset))
+  month <- rep(NA,nrow(dataset))
+  year <- rep(NA,nrow(dataset))
+  weekday <- rep(NA,nrow(dataset))
+  weektype <- rep(NA,nrow(dataset))
+  for(i in 1:nrow(dataset)){
+    if(!is.na(dataset$date[i])){
+      date.format <- "%Y-%m-%d"
+      if(is.na(as.Date(dataset$date[i], format = date.format))){
+        date.format <- "%m/%d/%y" 
+      }
+      date <- as.Date(dataset$date[i], format = date.format)
+      day[i] <- as.numeric(format(date , format = "%d"))
+      month[i] <- as.numeric(format(date , format = "%m"))
+      year[i] <- as.numeric(format(date , format = "%y"))
+      weekday[i] <- weekdays(date)
+      if(weekday[i] %in% c("Saturday","Sunday")){
+        weektype[i] <- "weekend"
+      }else{
+        weektype[i] <- "weekday"
+      }
+    }
+  }
+  
+  dataset$day <- day
+  dataset$month <- month
+  dataset$year <- year
+  dataset$weekday <- factor(weekday)
+  dataset$weektype <- factor(weektype)
+  
+  # create category data
+  dataset$category <- category
+  
+  # delete all NA
+  # dataset <- dataset[complete.cases(dataset),]
+  # remove all data that have countrySize less than 10
+  # dataset <- dataset[which(dataset$countrySize >10),]
+  # ggplot(dataset,aes(country)) + geom_bar(show.legend = TRUE)
+  
+  # remove all NA in date column
+  dataset <- dataset[!(is.na(dataset$date)),]
+  
+  #write a file
+  setwd('/Users/ploid/GitHub/tripadvisor-watpho/cleandata')
+  if(dir.exists(paste('/Users/ploid/GitHub/tripadvisor-watpho/cleandata/', wd.clean, sep = "")) == FALSE){
+    dir.create(wd.clean)
+  }
+  setwd(paste('/Users/ploid/GitHub/tripadvisor-watpho/cleandata/',wd.clean , sep = ""))
+  dataset <- unique(dataset)
+  write.csv(dataset,file = file.name)
 }
 
-dataset$day <- day
-dataset$month <- month
-dataset$year <- year
-dataset$weekday <- factor(weekday)
-dataset$weektype <- factor(weektype)
 
-# create category data
-dataset$category <- category
-
-# delete all NA
-# dataset <- dataset[complete.cases(dataset),]
-# remove all data that have countrySize less than 10
-# dataset <- dataset[which(dataset$countrySize >10),]
-# ggplot(dataset,aes(country)) + geom_bar(show.legend = TRUE)
-
-# remove all NA in date column
-# dataset <- dataset[!(is.na(dataset$date)),]
-# dataset <- dataset[!(is.na(dataset$fullreview)),]
-
-#write a file
-setwd('/Users/ploid/GitHub/tripadvisor-watpho/cleandata')
-wd.clean <- paste('clean', attraction.file.name, sep = "")
-if(dir.exists(paste('/Users/ploid/GitHub/tripadvisor-watpho/cleandata/', wd.clean, sep = "")) == FALSE){
-  dir.create(wd.clean)
-}
-setwd(paste('/Users/ploid/GitHub/tripadvisor-watpho/cleandata/',wd.clean , sep = ""))
-
-write.csv(dataset,file = file.name)
 # write.arff(dataset, file = "test_weka.arff")
